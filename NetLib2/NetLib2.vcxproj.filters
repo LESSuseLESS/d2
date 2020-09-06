@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="detectron2">
+      <UniqueIdentifier>{c57bc6e1-7389-4540-b7b0-083317f9900d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\Detectron2\detectron2\box_iou_rotated\box_iou_rotated_cuda.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\deformable\deform_conv_cuda.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\deformable\deform_conv_cuda_kernel.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\nms_rotated\nms_rotated_cuda.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\ROIAlign\ROIAlign_cuda.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\ROIAlignRotated\ROIAlignRotated_cuda.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\cuda_version.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\nms\nms_cuda.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\Detectron2\detectron2\ROIPool\ROIPool_cuda.cu">
+      <Filter>detectron2</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

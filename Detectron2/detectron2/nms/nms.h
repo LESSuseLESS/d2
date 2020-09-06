@@ -1,0 +1,38 @@
+#pragma once
+#include <torch/types.h>
+
+namespace detectron2 {
+
+at::Tensor nms_cpu(
+	const at::Tensor& dets,
+	const at::Tensor& scores,
+	const double iou_threshold);
+
+#ifdef WITH_CUDA
+at::Tensor nms_cuda(
+	const at::Tensor& dets,
+	const at::Tensor& scores,
+	const double iou_threshold);
+#endif
+
+// Interface for Python
+// inline is needed to prevent multiple function definitions when this header is
+// included by different cpps
+inline at::Tensor nms(
+    const at::Tensor& dets,
+    const at::Tensor& scores,
+    const float iou_threshold) {
+  assert(dets.device().is_cuda() == scores.device().is_cuda());
+  if (dets.device().is_cuda()) {
+#ifdef WITH_CUDA
+    return nms_cuda(
+        dets.contiguous(), scores.contiguous(), iou_threshold);
+#else
+    AT_ERROR("Not compiled with GPU support");
+#endif
+  }
+
+  return nms_cpu(dets.contiguous(), scores.contiguous(), iou_threshold);
+}
+
+} // namespace detectron2

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\Detectron2\detectron2\box_iou_rotated\box_iou_rotated_cuda.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\cuda_version.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\deformable\deform_conv_cuda.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\deformable\deform_conv_cuda_kernel.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\nms\nms_cuda.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\nms_rotated\nms_rotated_cuda.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\ROIAlignRotated\ROIAlignRotated_cuda.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\ROIAlign\ROIAlign_cuda.cu" />
+    <CudaCompile Include="..\Detectron2\detectron2\ROIPool\ROIPool_cuda.cu" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{69C1224E-F05A-4130-842D-9D89D312FCC8}</ProjectGuid>
+    <RootNamespace>NetLib2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>$(LIBTORCH_DIR_DEBUG)\libtorch\include;$(LIBTORCH_DIR_DEBUG)\libtorch\include\torch\csrc\api\include;%(Include)</Include>
+      <Warning>InheritFromHost</Warning>
+      <AdditionalCompilerOptions>-DWITH_CUDA -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__</AdditionalCompilerOptions>
+      <AdditionalOptions>-Xcudafe --display_error_number -Xcudafe --diag_suppress=1388 -Xcudafe --diag_suppress=1394 -Xcudafe --diag_suppress=2980 -Xcudafe --diag_suppress=381 -Xcudafe --diag_suppress=1390 -Xcudafe --diag_suppress=2978 -Xcudafe --diag_suppress=2979 -Xcompiler /wd4267 -Xcompiler /wd4251 -Xcompiler /wd4522 -Xcompiler /wd4838 -Xcompiler /wd4305 -Xcompiler /wd4244 -Xcompiler /wd4190 -Xcompiler /wd4101 -Xcompiler /wd4996 -Xcompiler /wd4275 -Xcompiler /wd4018 -Xcompiler /wd4804 %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>$(LIBTORCH_DIR)\libtorch\include;$(LIBTORCH_DIR)\libtorch\include\torch\csrc\api\include;%(Include)</Include>
+      <AdditionalCompilerOptions>-DWITH_CUDA -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__</AdditionalCompilerOptions>
+      <AdditionalOptions>-Xcudafe --display_error_number -Xcudafe --diag_suppress=1388 -Xcudafe --diag_suppress=1394 -Xcudafe --diag_suppress=2980 -Xcudafe --diag_suppress=381 -Xcudafe --diag_suppress=1390 -Xcudafe --diag_suppress=2978 -Xcudafe --diag_suppress=2979 -Xcompiler /wd4267 -Xcompiler /wd4251 -Xcompiler /wd4522 -Xcompiler /wd4838 -Xcompiler /wd4305 -Xcompiler /wd4244 -Xcompiler /wd4190 -Xcompiler /wd4101 -Xcompiler /wd4996 -Xcompiler /wd4275 -Xcompiler /wd4018 -Xcompiler /wd4804 %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

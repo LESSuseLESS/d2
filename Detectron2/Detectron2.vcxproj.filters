@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Import">
+      <UniqueIdentifier>{c7e6a96b-c4bb-40af-86cb-34f117ccc6d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Import\Baseline">
+      <UniqueIdentifier>{3e679694-8db6-42af-893d-c637ae9ea4d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules">
+      <UniqueIdentifier>{133ca1e3-4aee-4d3c-88ca-33552c12b53b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\detectron2">
+      <UniqueIdentifier>{f3208ca6-479f-479c-9079-eb8defebc97c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Structures">
+      <UniqueIdentifier>{a522a615-d7ec-4e1a-9fb2-e65b47f85699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{b315efd9-0c86-47da-8b27-e5bd9f3f961e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\ResNet">
+      <UniqueIdentifier>{112ae1fc-58f3-45be-8bc8-63c939750e3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\BatchNorm">
+      <UniqueIdentifier>{5700e215-eb4a-4388-81dc-c2d7bd1b3375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\FPN">
+      <UniqueIdentifier>{4941d634-5d9a-48b3-9b16-4b911861b7bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\RPN">
+      <UniqueIdentifier>{e9b905ab-b718-44a9-97dd-2c9c47341dd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\ROIHeads">
+      <UniqueIdentifier>{56a0c3ae-d956-47cf-bb84-206d5b756591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\ROIPooler">
+      <UniqueIdentifier>{68b098bc-1af7-4b33-9413-38ff5fa02f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\Operators">
+      <UniqueIdentifier>{32c61244-dc53-4d71-a8c6-fa3c731df710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules\Conv">
+      <UniqueIdentifier>{b756bf4f-b027-4d1d-95b8-8ec4f2bed56d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fvcore">
+      <UniqueIdentifier>{32cf77d8-34a0-49ef-b10e-8c305d6ea307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MetaArch">
+      <UniqueIdentifier>{c0df69cc-801a-4fd7-a831-a3d685442b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{592b5b79-ee89-4b6c-b0df-a015009d508b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\coco">
+      <UniqueIdentifier>{f8d9c8aa-06a8-420c-8819-005143d358f6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Detectron2.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\ModelImporter.h">
+      <Filter>Source Files\Import</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\box_iou_rotated\box_iou_rotated.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\box_iou_rotated\box_iou_rotated_utils.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\deformable\deform_conv.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\nms_rotated\nms_rotated.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\ROIAlign\ROIAlign.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\ROIAlignRotated\ROIAlignRotated.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Boxes.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Instances.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\File.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\ShapeSpec.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ResNet\ResNet.h">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ResNet\CNNBlockBase.h">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ResNet\BasicBlock.h">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ResNet\BottleneckBlock.h">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ResNet\DeformBottleneckBlock.h">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ResNet\BasicStem.h">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BatchNorm\BatchNorm.h">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BatchNorm\BatchNorm2d.h">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BatchNorm\FrozenBatchNorm2d.h">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BatchNorm\NaiveSyncBatchNorm.h">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\FPN\TopBlock.h">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\FPN\LastLevelMaxPool.h">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\FPN\LastLevelP6P7.h">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\RPN\AnchorGenerator.h">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\RPN\DefaultAnchorGenerator.h">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\RPN\RotatedAnchorGenerator.h">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\RPN\StandardRPNHead.h">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\ROIHeads.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\FastRCNNConvFCHead.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\FastRCNNOutputLayers.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Matcher.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIPooler\ROIPooler.h">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIPooler\ROIPoolerLevel.h">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIPooler\ROIAlign.h">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIPooler\ROIAlignRotated.h">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\Res5ROIHeads.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\StandardROIHeads.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Backbone.h">
+      <Filter>Source Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Visualizer.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\ImageList.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Sequence.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\PostProcessing.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\FPN\SemSegFPNHead.h">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BatchNorm\GroupNorm.h">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\MaskOps.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\RPN\RPNOutputs.h">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Box2BoxTransform.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Sampling.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\RPN\RRPN.h">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\RPN\RPN.h">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\NMS.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\RotatedBoxes.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\FastRCNNOutputs.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Opeartors\NewEmptyTensorOp.h">
+      <Filter>Source Files\Modules\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Opeartors\ModulatedDeformConvOp.h">
+      <Filter>Source Files\Modules\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Opeartors\DeformConvOp.h">
+      <Filter>Source Files\Modules\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Conv\ConvBn2d.h">
+      <Filter>Source Files\Modules\Conv</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Conv\DeformConv.h">
+      <Filter>Source Files\Modules\Conv</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Conv\ModulatedDeformConv.h">
+      <Filter>Source Files\Modules\Conv</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\BaseKeypointRCNNHead.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\KRCNNConvDeconvUpsampleHead.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Keypoints.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\FPN\FPN.h">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\BitMasks.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\PolygonMasks.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\BaseMaskRCNNHead.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\MaskRCNNConvUpsampleHead.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\Masks.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\EventStorage.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\RotatedFastRCNNOutputLayers.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\RROIHeads.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIHeads\CascadeROIHeads.h">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualizationDemo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\AsyncPredictor.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\DefaultPredictor.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\CfgNode.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="fvcore\fvcore.h">
+      <Filter>Source Files\fvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="fvcore\config.h">
+      <Filter>Source Files\fvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="fvcore\yacs.h">
+      <Filter>Source Files\fvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaArch\GeneralizedRCNN.h">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaArch\MetaArch.h">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaArch\PanopticFPN.h">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaArch\ProposalNetwork.h">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaArch\SemanticSegmentor.h">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Predictor.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\VideoVisualizer.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\PanopticSegment.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\TransformGen.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\ResizeShortestEdge.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\ResizeTransform.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\Transform.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\VisImage.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Canvas.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\VisColor.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="coco\maskApi.h">
+      <Filter>Source Files\coco</Filter>
+    </ClInclude>
+    <ClInclude Include="coco\mask.h">
+      <Filter>Source Files\coco</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures\GenericMask.h">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\MetadataCatalog.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Detectron2Includes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\nms\nms.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="detectron2\ROIPool\ROIPool.h">
+      <Filter>Source Files\detectron2</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ROIPooler\ROIPool.h">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\cvCanvas.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\BuiltinDataset.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\BuiltinMeta.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Timer.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Detectron2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Baseline\model_final_997cc7.cpp">
+      <Filter>Source Files\Import\Baseline</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Baseline\model_final_a3ec72.cpp">
+      <Filter>Source Files\Import\Baseline</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Baseline\model_final_cafdb1.cpp">
+      <Filter>Source Files\Import\Baseline</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Baseline\model_final_f6e8b1.cpp">
+      <Filter>Source Files\Import\Baseline</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\ModelImporter.cpp">
+      <Filter>Source Files\Import</Filter>
+    </ClCompile>
+    <ClCompile Include="detectron2\box_iou_rotated\box_iou_rotated_cpu.cpp">
+      <Filter>Source Files\detectron2</Filter>
+    </ClCompile>
+    <ClCompile Include="detectron2\nms_rotated\nms_rotated_cpu.cpp">
+      <Filter>Source Files\detectron2</Filter>
+    </ClCompile>
+    <ClCompile Include="detectron2\ROIAlign\ROIAlign_cpu.cpp">
+      <Filter>Source Files\detectron2</Filter>
+    </ClCompile>
+    <ClCompile Include="detectron2\ROIAlignRotated\ROIAlignRotated_cpu.cpp">
+      <Filter>Source Files\detectron2</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\Boxes.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\Instances.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\File.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ResNet\ResNet.cpp">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ResNet\CNNBlockBase.cpp">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ResNet\BasicBlock.cpp">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ResNet\BottleneckBlock.cpp">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ResNet\DeformBottleneckBlock.cpp">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ResNet\BasicStem.cpp">
+      <Filter>Source Files\Modules\ResNet</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BatchNorm\BatchNorm.cpp">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BatchNorm\FrozenBatchNorm2d.cpp">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BatchNorm\NaiveSyncBatchNorm.cpp">
+      <Filter>Source Files\Modules\BatchNorm</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\FPN\LastLevelMaxPool.cpp">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\FPN\LastLevelP6P7.cpp">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\RPN\AnchorGenerator.cpp">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\RPN\DefaultAnchorGenerator.cpp">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\RPN\RotatedAnchorGenerator.cpp">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\RPN\StandardRPNHead.cpp">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\ROIHeads.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\FastRCNNConvFCHead.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\FastRCNNOutputLayers.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\Matcher.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIPooler\ROIPooler.cpp">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIPooler\ROIAlign.cpp">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIPooler\ROIAlignRotated.cpp">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\Res5ROIHeads.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\StandardROIHeads.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Visualizer.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\ImageList.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\Sequence.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\PostProcessing.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\FPN\SemSegFPNHead.cpp">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\MaskOps.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\RPN\RPNOutputs.cpp">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\Box2BoxTransform.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\Sampling.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\RPN\RRPN.cpp">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\RPN\RPN.cpp">
+      <Filter>Source Files\Modules\RPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\NMS.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\RotatedBoxes.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\FastRCNNOutputs.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Opeartors\NewEmptyTensorOp.cpp">
+      <Filter>Source Files\Modules\Operators</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Opeartors\ModulatedDeformConvOp.cpp">
+      <Filter>Source Files\Modules\Operators</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Opeartors\DeformConvOp.cpp">
+      <Filter>Source Files\Modules\Operators</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Conv\ConvBn2d.cpp">
+      <Filter>Source Files\Modules\Conv</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Conv\DeformConv.cpp">
+      <Filter>Source Files\Modules\Conv</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Conv\ModulatedDeformConv.cpp">
+      <Filter>Source Files\Modules\Conv</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\KRCNNConvDeconvUpsampleHead.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\BaseKeypointRCNNHead.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\Keypoints.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\FPN\FPN.cpp">
+      <Filter>Source Files\Modules\FPN</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\BitMasks.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\PolygonMasks.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\BaseMaskRCNNHead.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\MaskRCNNConvUpsampleHead.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\EventStorage.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\RotatedFastRCNNOutputLayers.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\RROIHeads.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIHeads\CascadeROIHeads.cpp">
+      <Filter>Source Files\Modules\ROIHeads</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualizationDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\AsyncPredictor.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\DefaultPredictor.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\CfgNode.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="fvcore\fvcore.cpp">
+      <Filter>Source Files\fvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="fvcore\config.cpp">
+      <Filter>Source Files\fvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="fvcore\yacs.cpp">
+      <Filter>Source Files\fvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaArch\GeneralizedRCNN.cpp">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaArch\MetaArch.cpp">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaArch\PanopticFPN.cpp">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaArch\ProposalNetwork.cpp">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaArch\SemanticSegmentor.cpp">
+      <Filter>Source Files\MetaArch</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\VideoVisualizer.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\PanopticSegment.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\TransformGen.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\ResizeShortestEdge.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\ResizeTransform.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\Transform.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\ShapeSpec.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\VisImage.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\VisColor.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="coco\maskApi.c">
+      <Filter>Source Files\coco</Filter>
+    </ClCompile>
+    <ClCompile Include="coco\mask.cpp">
+      <Filter>Source Files\coco</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures\GenericMask.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\MetadataCatalog.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Baseline\model_final_f10217.cpp">
+      <Filter>Source Files\Import\Baseline</Filter>
+    </ClCompile>
+    <ClCompile Include="Base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="detectron2\nms\nms_cpu.cpp">
+      <Filter>Source Files\detectron2</Filter>
+    </ClCompile>
+    <ClCompile Include="detectron2\ROIPool\ROIPool_cpu.cpp">
+      <Filter>Source Files\detectron2</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ROIPooler\ROIPool.cpp">
+      <Filter>Source Files\Modules\ROIPooler</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\cvCanvas.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\BuiltinDataset.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\BuiltinMeta.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Timer.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Import\ImportBaseline.py">
+      <Filter>Source Files\Import</Filter>
+    </None>
+    <None Include="detectron2\nms\README.md">
+      <Filter>Source Files\detectron2</Filter>
+    </None>
+    <None Include="detectron2\ROIPool\README.md">
+      <Filter>Source Files\detectron2</Filter>
+    </None>
+    <None Include="LICENSE">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.md">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="CfgDefaults.yaml">
+      <Filter>Source Files</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+</Project>

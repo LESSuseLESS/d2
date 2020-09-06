@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6EB929CD-61C3-474D-98CF-D885B44A7F24}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Detectron2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>Base.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(ProjectDir);$(LIBTORCH_DIR_DEBUG)\libtorch\include;$(LIBTORCH_DIR_DEBUG)\libtorch\include\torch\csrc\api\include;$(OPENCV_DIR)/../../include;$(YAML_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4251;4522;4838;4305;4244;4190;4101;4996;4275;4018</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/D "WITH_CUDA" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>yaml-cppd.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)/lib;$(YAML_DIR)\build\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>Base.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)/../../include;$(SolutionDir);$(LIBTORCH_DIR)\libtorch\include;$(LIBTORCH_DIR)\libtorch\include\torch\csrc\api\include;$(YAML_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4251;4522;4838;4305;4244;4190;4101;4996;4275;4018</DisableSpecificWarnings>
+      <AdditionalOptions>/D "WITH_CUDA" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>yaml-cpp.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)/lib;$(YAML_DIR)\build\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="coco\mask.h" />
+    <ClInclude Include="coco\maskApi.h" />
+    <ClInclude Include="Data\BuiltinDataset.h" />
+    <ClInclude Include="Data\BuiltinMeta.h" />
+    <ClInclude Include="Data\MetadataCatalog.h" />
+    <ClInclude Include="Data\ResizeShortestEdge.h" />
+    <ClInclude Include="Data\ResizeTransform.h" />
+    <ClInclude Include="Data\Transform.h" />
+    <ClInclude Include="Data\TransformGen.h" />
+    <ClInclude Include="Detectron2.h" />
+    <ClInclude Include="Detectron2Includes.h" />
+    <ClInclude Include="detectron2\box_iou_rotated\box_iou_rotated.h" />
+    <ClInclude Include="detectron2\box_iou_rotated\box_iou_rotated_utils.h" />
+    <ClInclude Include="detectron2\deformable\deform_conv.h" />
+    <ClInclude Include="detectron2\nms\nms.h" />
+    <ClInclude Include="detectron2\nms_rotated\nms_rotated.h" />
+    <ClInclude Include="detectron2\ROIAlignRotated\ROIAlignRotated.h" />
+    <ClInclude Include="detectron2\ROIAlign\ROIAlign.h" />
+    <ClInclude Include="detectron2\ROIPool\ROIPool.h" />
+    <ClInclude Include="fvcore\fvcore.h" />
+    <ClInclude Include="fvcore\config.h" />
+    <ClInclude Include="fvcore\yacs.h" />
+    <ClInclude Include="Import\ModelImporter.h" />
+    <ClInclude Include="MetaArch\GeneralizedRCNN.h" />
+    <ClInclude Include="MetaArch\MetaArch.h" />
+    <ClInclude Include="MetaArch\PanopticFPN.h" />
+    <ClInclude Include="MetaArch\ProposalNetwork.h" />
+    <ClInclude Include="MetaArch\SemanticSegmentor.h" />
+    <ClInclude Include="Modules\Backbone.h" />
+    <ClInclude Include="Modules\BatchNorm\BatchNorm.h" />
+    <ClInclude Include="Modules\BatchNorm\BatchNorm2d.h" />
+    <ClInclude Include="Modules\BatchNorm\FrozenBatchNorm2d.h" />
+    <ClInclude Include="Modules\BatchNorm\GroupNorm.h" />
+    <ClInclude Include="Modules\BatchNorm\NaiveSyncBatchNorm.h" />
+    <ClInclude Include="Modules\Conv\ConvBn2d.h" />
+    <ClInclude Include="Modules\Conv\DeformConv.h" />
+    <ClInclude Include="Modules\Conv\ModulatedDeformConv.h" />
+    <ClInclude Include="Modules\FPN\FPN.h" />
+    <ClInclude Include="Modules\FPN\LastLevelMaxPool.h" />
+    <ClInclude Include="Modules\FPN\LastLevelP6P7.h" />
+    <ClInclude Include="Modules\FPN\SemSegFPNHead.h" />
+    <ClInclude Include="Modules\FPN\TopBlock.h" />
+    <ClInclude Include="Modules\Opeartors\DeformConvOp.h" />
+    <ClInclude Include="Modules\Opeartors\ModulatedDeformConvOp.h" />
+    <ClInclude Include="Modules\Opeartors\NewEmptyTensorOp.h" />
+    <ClInclude Include="Modules\ResNet\BasicBlock.h" />
+    <ClInclude Include="Modules\ResNet\BasicStem.h" />
+    <ClInclude Include="Modules\ResNet\BottleneckBlock.h" />
+    <ClInclude Include="Modules\ResNet\CNNBlockBase.h" />
+    <ClInclude Include="Modules\ResNet\DeformBottleneckBlock.h" />
+    <ClInclude Include="Modules\ResNet\ResNet.h" />
+    <ClInclude Include="Modules\ROIHeads\BaseKeypointRCNNHead.h" />
+    <ClInclude Include="Modules\ROIHeads\BaseMaskRCNNHead.h" />
+    <ClInclude Include="Modules\ROIHeads\CascadeROIHeads.h" />
+    <ClInclude Include="Modules\ROIHeads\FastRCNNConvFCHead.h" />
+    <ClInclude Include="Modules\ROIHeads\FastRCNNOutputLayers.h" />
+    <ClInclude Include="Modules\ROIHeads\FastRCNNOutputs.h" />
+    <ClInclude Include="Modules\ROIHeads\KRCNNConvDeconvUpsampleHead.h" />
+    <ClInclude Include="Modules\ROIHeads\MaskRCNNConvUpsampleHead.h" />
+    <ClInclude Include="Modules\ROIHeads\Res5ROIHeads.h" />
+    <ClInclude Include="Modules\ROIHeads\ROIHeads.h" />
+    <ClInclude Include="Modules\ROIHeads\RotatedFastRCNNOutputLayers.h" />
+    <ClInclude Include="Modules\ROIHeads\RROIHeads.h" />
+    <ClInclude Include="Modules\ROIHeads\StandardROIHeads.h" />
+    <ClInclude Include="Modules\ROIPooler\ROIAlign.h" />
+    <ClInclude Include="Modules\ROIPooler\ROIAlignRotated.h" />
+    <ClInclude Include="Modules\ROIPooler\ROIPool.h" />
+    <ClInclude Include="Modules\ROIPooler\ROIPooler.h" />
+    <ClInclude Include="Modules\ROIPooler\ROIPoolerLevel.h" />
+    <ClInclude Include="Modules\RPN\AnchorGenerator.h" />
+    <ClInclude Include="Modules\RPN\DefaultAnchorGenerator.h" />
+    <ClInclude Include="Modules\RPN\RPN.h" />
+    <ClInclude Include="Modules\RPN\RotatedAnchorGenerator.h" />
+    <ClInclude Include="Modules\RPN\RPNOutputs.h" />
+    <ClInclude Include="Modules\RPN\RRPN.h" />
+    <ClInclude Include="Modules\RPN\StandardRPNHead.h" />
+    <ClInclude Include="Structures\BitMasks.h" />
+    <ClInclude Include="Structures\Box2BoxTransform.h" />
+    <ClInclude Include="Structures\Boxes.h" />
+    <ClInclude Include="Structures\GenericMask.h" />
+    <ClInclude Include="Structures\ImageList.h" />
+    <ClInclude Include="Structures\Instances.h" />
+    <ClInclude Include="Structures\Keypoints.h" />
+    <ClInclude Include="Structures\MaskOps.h" />
+    <ClInclude Include="Structures\Masks.h" />
+    <ClInclude Include="Structures\Matcher.h" />
+    <ClInclude Include="Structures\NMS.h" />
+    <ClInclude Include="Structures\PanopticSegment.h" />
+    <ClInclude Include="Structures\PolygonMasks.h" />
+    <ClInclude Include="Structures\PostProcessing.h" />
+    <ClInclude Include="Structures\RotatedBoxes.h" />
+    <ClInclude Include="Structures\Sampling.h" />
+    <ClInclude Include="Structures\Sequence.h" />
+    <ClInclude Include="Structures\ShapeSpec.h" />
+    <ClInclude Include="Utils\AsyncPredictor.h" />
+    <ClInclude Include="Utils\Canvas.h" />
+    <ClInclude Include="Utils\CfgNode.h" />
+    <ClInclude Include="Utils\DefaultPredictor.h" />
+    <ClInclude Include="Utils\EventStorage.h" />
+    <ClInclude Include="Utils\File.h" />
+    <ClInclude Include="Utils\cvCanvas.h" />
+    <ClInclude Include="Utils\Timer.h" />
+    <ClInclude Include="Utils\VisColor.h" />
+    <ClInclude Include="Utils\VisImage.h" />
+    <ClInclude Include="Utils\Predictor.h" />
+    <ClInclude Include="Utils\Utils.h" />
+    <ClInclude Include="Utils\VideoVisualizer.h" />
+    <ClInclude Include="Utils\Visualizer.h" />
+    <ClInclude Include="VisualizationDemo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Base.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="coco\mask.cpp" />
+    <ClCompile Include="coco\maskApi.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Data\BuiltinDataset.cpp" />
+    <ClCompile Include="Data\BuiltinMeta.cpp" />
+    <ClCompile Include="Data\MetadataCatalog.cpp" />
+    <ClCompile Include="Data\ResizeShortestEdge.cpp" />
+    <ClCompile Include="Data\ResizeTransform.cpp" />
+    <ClCompile Include="Data\Transform.cpp" />
+    <ClCompile Include="Data\TransformGen.cpp" />
+    <ClCompile Include="Detectron2.cpp" />
+    <ClCompile Include="detectron2\box_iou_rotated\box_iou_rotated_cpu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="detectron2\nms\nms_cpu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="detectron2\nms_rotated\nms_rotated_cpu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="detectron2\ROIAlignRotated\ROIAlignRotated_cpu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="detectron2\ROIAlign\ROIAlign_cpu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="detectron2\ROIPool\ROIPool_cpu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="fvcore\fvcore.cpp" />
+    <ClCompile Include="fvcore\config.cpp" />
+    <ClCompile Include="fvcore\yacs.cpp" />
+    <ClCompile Include="Import\Baseline\model_final_997cc7.cpp" />
+    <ClCompile Include="Import\Baseline\model_final_a3ec72.cpp" />
+    <ClCompile Include="Import\Baseline\model_final_cafdb1.cpp" />
+    <ClCompile Include="Import\Baseline\model_final_f10217.cpp" />
+    <ClCompile Include="Import\Baseline\model_final_f6e8b1.cpp" />
+    <ClCompile Include="Import\ModelImporter.cpp" />
+    <ClCompile Include="MetaArch\GeneralizedRCNN.cpp" />
+    <ClCompile Include="MetaArch\MetaArch.cpp" />
+    <ClCompile Include="MetaArch\PanopticFPN.cpp" />
+    <ClCompile Include="MetaArch\ProposalNetwork.cpp" />
+    <ClCompile Include="MetaArch\SemanticSegmentor.cpp" />
+    <ClCompile Include="Modules\BatchNorm\BatchNorm.cpp" />
+    <ClCompile Include="Modules\BatchNorm\FrozenBatchNorm2d.cpp" />
+    <ClCompile Include="Modules\BatchNorm\NaiveSyncBatchNorm.cpp" />
+    <ClCompile Include="Modules\Conv\ConvBn2d.cpp" />
+    <ClCompile Include="Modules\Conv\DeformConv.cpp" />
+    <ClCompile Include="Modules\Conv\ModulatedDeformConv.cpp" />
+    <ClCompile Include="Modules\FPN\FPN.cpp" />
+    <ClCompile Include="Modules\FPN\LastLevelMaxPool.cpp" />
+    <ClCompile Include="Modules\FPN\LastLevelP6P7.cpp" />
+    <ClCompile Include="Modules\FPN\SemSegFPNHead.cpp" />
+    <ClCompile Include="Modules\Opeartors\DeformConvOp.cpp" />
+    <ClCompile Include="Modules\Opeartors\ModulatedDeformConvOp.cpp" />
+    <ClCompile Include="Modules\Opeartors\NewEmptyTensorOp.cpp" />
+    <ClCompile Include="Modules\ResNet\BasicBlock.cpp" />
+    <ClCompile Include="Modules\ResNet\BasicStem.cpp" />
+    <ClCompile Include="Modules\ResNet\BottleneckBlock.cpp" />
+    <ClCompile Include="Modules\ResNet\CNNBlockBase.cpp" />
+    <ClCompile Include="Modules\ResNet\DeformBottleneckBlock.cpp" />
+    <ClCompile Include="Modules\ResNet\ResNet.cpp" />
+    <ClCompile Include="Modules\ROIHeads\BaseKeypointRCNNHead.cpp" />
+    <ClCompile Include="Modules\ROIHeads\BaseMaskRCNNHead.cpp" />
+    <ClCompile Include="Modules\ROIHeads\CascadeROIHeads.cpp" />
+    <ClCompile Include="Modules\ROIHeads\FastRCNNConvFCHead.cpp" />
+    <ClCompile Include="Modules\ROIHeads\FastRCNNOutputLayers.cpp" />
+    <ClCompile Include="Modules\ROIHeads\FastRCNNOutputs.cpp" />
+    <ClCompile Include="Modules\ROIHeads\KRCNNConvDeconvUpsampleHead.cpp" />
+    <ClCompile Include="Modules\ROIHeads\MaskRCNNConvUpsampleHead.cpp" />
+    <ClCompile Include="Modules\ROIHeads\Res5ROIHeads.cpp" />
+    <ClCompile Include="Modules\ROIHeads\ROIHeads.cpp" />
+    <ClCompile Include="Modules\ROIHeads\RotatedFastRCNNOutputLayers.cpp" />
+    <ClCompile Include="Modules\ROIHeads\RROIHeads.cpp" />
+    <ClCompile Include="Modules\ROIHeads\StandardROIHeads.cpp" />
+    <ClCompile Include="Modules\ROIPooler\ROIAlign.cpp" />
+    <ClCompile Include="Modules\ROIPooler\ROIAlignRotated.cpp" />
+    <ClCompile Include="Modules\ROIPooler\ROIPool.cpp" />
+    <ClCompile Include="Modules\ROIPooler\ROIPooler.cpp" />
+    <ClCompile Include="Modules\RPN\AnchorGenerator.cpp" />
+    <ClCompile Include="Modules\RPN\DefaultAnchorGenerator.cpp" />
+    <ClCompile Include="Modules\RPN\RPN.cpp" />
+    <ClCompile Include="Modules\RPN\RotatedAnchorGenerator.cpp" />
+    <ClCompile Include="Modules\RPN\RPNOutputs.cpp" />
+    <ClCompile Include="Modules\RPN\RRPN.cpp" />
+    <ClCompile Include="Modules\RPN\StandardRPNHead.cpp" />
+    <ClCompile Include="Structures\BitMasks.cpp" />
+    <ClCompile Include="Structures\Box2BoxTransform.cpp" />
+    <ClCompile Include="Structures\Boxes.cpp" />
+    <ClCompile Include="Structures\GenericMask.cpp" />
+    <ClCompile Include="Structures\ImageList.cpp" />
+    <ClCompile Include="Structures\Instances.cpp" />
+    <ClCompile Include="Structures\Keypoints.cpp" />
+    <ClCompile Include="Structures\MaskOps.cpp" />
+    <ClCompile Include="Structures\Matcher.cpp" />
+    <ClCompile Include="Structures\NMS.cpp" />
+    <ClCompile Include="Structures\PanopticSegment.cpp" />
+    <ClCompile Include="Structures\PolygonMasks.cpp" />
+    <ClCompile Include="Structures\PostProcessing.cpp" />
+    <ClCompile Include="Structures\RotatedBoxes.cpp" />
+    <ClCompile Include="Structures\Sampling.cpp" />
+    <ClCompile Include="Structures\Sequence.cpp" />
+    <ClCompile Include="Structures\ShapeSpec.cpp" />
+    <ClCompile Include="Utils\AsyncPredictor.cpp" />
+    <ClCompile Include="Utils\CfgNode.cpp" />
+    <ClCompile Include="Utils\DefaultPredictor.cpp" />
+    <ClCompile Include="Utils\EventStorage.cpp" />
+    <ClCompile Include="Utils\File.cpp" />
+    <ClCompile Include="Utils\cvCanvas.cpp" />
+    <ClCompile Include="Utils\Timer.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
+    <ClCompile Include="Utils\VideoVisualizer.cpp" />
+    <ClCompile Include="Utils\VisColor.cpp" />
+    <ClCompile Include="Utils\VisImage.cpp" />
+    <ClCompile Include="Utils\Visualizer.cpp" />
+    <ClCompile Include="VisualizationDemo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="CfgDefaults.yaml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </CopyFileToFolders>
+    <None Include="detectron2\nms\README.md" />
+    <None Include="detectron2\ROIPool\README.md" />
+    <None Include="Import\ImportBaseline.py" />
+    <None Include="LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
