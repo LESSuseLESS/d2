@@ -77,6 +77,9 @@ void BaseKeypointRCNNHeadImpl::keypoint_rcnn_inference(const torch::Tensor &pred
 	// flatten all bboxes from all images together (list[Boxes] -> Rx4 tensor)
 	auto bboxes = pred_instances.getTensorVec("pred_boxes");
 	auto bboxes_flat = cat(bboxes, 0);
+	if (bboxes_flat.numel() == 0) {
+		return;
+	}
 
 	auto keypoint_results = Keypoints::heatmaps_to_keypoints(pred_keypoint_logits, bboxes_flat);
 	auto num_instances_per_image = pred_instances.getLenVec();

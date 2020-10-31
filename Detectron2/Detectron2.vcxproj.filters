@@ -391,6 +391,9 @@
     <ClInclude Include="Utils\Timer.h">
       <Filter>Source Files\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Utils\VideoAnalyzer.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Detectron2.cpp">
@@ -703,6 +706,9 @@
       <Filter>Source Files\Data</Filter>
     </ClCompile>
     <ClCompile Include="Utils\Timer.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\VideoAnalyzer.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>

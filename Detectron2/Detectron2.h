@@ -9,7 +9,6 @@ namespace Detectron2
 	// data structures
 
 	using TensorMap = std::unordered_map<std::string, torch::Tensor>;
-	using TensorMapList = std::vector<std::shared_ptr<TensorMap>>;
 	using TensorVec = std::vector<torch::Tensor>;
 	using BoxesList = TensorVec;
 

@@ -14,7 +14,15 @@ AsyncPredictor::AsyncPredictor(const CfgNode &cfg, int num_gpus) : m_put_idx(0),
 		DefaultPredictor predictor(cfg); // doh' this cloning is unnecessary
 		while (true) {
 			int idx; torch::Tensor data;
+			{
+				std::unique_lock<std::mutex> lk(m_task_queue_mutex);
+				m_task_queue_ready.wait(lk, [=]() { return !m_task_queue.empty(); });
+			}
 			m_task_queue_mutex.lock();
+			if (m_task_queue.empty()) {
+				m_task_queue_mutex.unlock();
+				continue;
+			}
 			tie(idx, data) = m_task_queue.front();
 			if (idx >= 0) {
 				m_task_queue.pop_front();

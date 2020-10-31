@@ -2,6 +2,7 @@
 
 #include <Detectron2/Structures/Instances.h>
 #include <Detectron2/Utils/Predictor.h>
+#include <Detectron2/Utils/VideoAnalyzer.h>
 #include <Detectron2/Utils/Visualizer.h>
 
 namespace Detectron2
@@ -60,14 +61,16 @@ namespace Detectron2
 		*/
 		void run_on_video(cv::VideoCapture &video, std::function<bool(cv::Mat)> vis_frame_processor);
 
+		/**
+			Captures predictions from frames of the input video.
+		 */
+		void analyze_on_video(cv::VideoCapture &video, VideoAnalyzer &analyzer);
+
 	private:
-		std::shared_ptr<Canvas> m_canvas;
 		Metadata m_metadata;
 		torch::Device m_cpu_device;
 		ColorMode m_instance_mode;
 		bool m_parallel;
 		std::shared_ptr<Predictor> m_predictor;
-
-		void _frame_from_video(int video);
 	};
 }

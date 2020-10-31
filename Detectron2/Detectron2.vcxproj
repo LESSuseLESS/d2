@@ -273,6 +273,7 @@
     <ClInclude Include="Utils\File.h" />
     <ClInclude Include="Utils\cvCanvas.h" />
     <ClInclude Include="Utils\Timer.h" />
+    <ClInclude Include="Utils\VideoAnalyzer.h" />
     <ClInclude Include="Utils\VisColor.h" />
     <ClInclude Include="Utils\VisImage.h" />
     <ClInclude Include="Utils\Predictor.h" />
@@ -405,6 +406,7 @@
     <ClCompile Include="Utils\cvCanvas.cpp" />
     <ClCompile Include="Utils\Timer.cpp" />
     <ClCompile Include="Utils\Utils.cpp" />
+    <ClCompile Include="Utils\VideoAnalyzer.cpp" />
     <ClCompile Include="Utils\VideoVisualizer.cpp" />
     <ClCompile Include="Utils\VisColor.cpp" />
     <ClCompile Include="Utils\VisImage.cpp" />

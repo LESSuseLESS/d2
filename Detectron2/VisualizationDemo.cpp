@@ -220,3 +220,33 @@ void VisualizationDemo::run_on_video(cv::VideoCapture &video, function<bool(cv::
 		}
 	}
 }
+
+void VisualizationDemo::analyze_on_video(cv::VideoCapture &video, VideoAnalyzer &analyzer) {
+	auto process_predictions = [&](cv::Mat &frame, InstancesPtr predictions) {
+			Timer timer("analyze_predictions");
+
+			if (predictions->has("panoptic_seg")) {
+				auto panoptic_seg = dynamic_pointer_cast<PanopticSegment>(predictions->get("panoptic_seg"));
+				analyzer.on_panoptic_seg_predictions(
+					frame, panoptic_seg->seg.to(m_cpu_device), panoptic_seg->infos
+				);
+			}
+			else if (predictions->has("instances")) {
+				auto instances = dynamic_pointer_cast<Instances>(predictions->get("instances"));
+				instances->to(m_cpu_device);
+				analyzer.on_instance_predictions(frame, instances, m_metadata->keypoint_names);
+			}
+			else if (predictions->has("sem_seg")) {
+				auto sem_seq = predictions->getTensor("sem_seg").argmax(0).to(m_cpu_device);
+				analyzer.on_sem_seg(frame, sem_seq);
+			}
+	};
+
+	while (video.isOpened()) {
+		cv::Mat frame;
+		if (!video.read(frame)) {
+			break;
+		}
+		process_predictions(frame, m_predictor->predict(image_to_tensor(frame)));
+	}
+}

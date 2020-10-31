@@ -35,6 +35,7 @@ namespace Detectron2
 
 	private:
 		std::mutex m_task_queue_mutex;
+		std::condition_variable m_task_queue_ready;
 		std::list<std::tuple<int, torch::Tensor>> m_task_queue;
 		std::mutex m_result_queue_mutex;
 		std::list<std::tuple<int, InstancesPtr>> m_result_queue;
